@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+\urlstyle{rm}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname doiprefix\endcsname\relax\def\doiprefix{DOI: }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Hao:gidmaps:2014}
+\bibinfo{author}{Hao, Z.}, \bibinfo{author}{AghaKouchak, A.},
+  \bibinfo{author}{Nakhjiri, N.} \& \bibinfo{author}{Farahmand, A.}
+\newblock \bibinfo{title}{Global integrated drought monitoring and prediction
+  system ({GIDMaPS}) data sets}.
+\newblock \bibinfo{howpublished}{\emph{figshare}
+  \url{http://dx.doi.org/10.6084/m9.figshare.853801}} (\bibinfo{year}{2014}).
+
+\end{thebibliography}

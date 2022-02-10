@@ -1,0 +1,106 @@
+
+1. Introduction
+
+    - 1873, Emile Mathieu published description of 5-transitive group of permutations
+      on 24 symbols - simple group w/ 244,823,040 elements (M24, the largest Mathieu group)
+    - Shannon's "A Mathematical Theory of Communications"
+    - Marcel Golay -> Golay code -> extended Golay code G s.t. Aut(G) =~ M24
+    - defn of simple groups, classification of simple groups, the 26 sporadic groups
+    - Lemma 1, M24 is the only simple group of order 244,823,040
+    - Mathieu's construction using 3 permutations a,b,c
+
+    - searching for constructions is a "cottage industry"
+    - overview of paper:
+        - coding theory, hamming codes, golay codes
+        - 2 simple constructions of extended Golay Code
+        - relationship between these constructions -> M24
+        - visual description of M24
+        - 2 more Mathieu groups as stabilizer subgroups within M24
+
+    - Questions
+        - 5 transitive group?
+        - how to prove a group is simple?
+        - how are finite groups constructed from simple groups?
+        - how are most sporadic groups constructed? permutations for Mathieu groups?
+        - what is the defining property of M24. How do we know a construction gives M24?
+        - how a,b,c permutations were used to generate M24? just composition?
+
+
+2. Error-Correcting Codes
+    - defn of binary code of length n - set of vectors from F^n
+    - code is linear w/ dim k if it exhausts a subspace of dim k within F^n
+    - Hamming and Golay are linear
+    - generator matrix basis not unique, distance, min dist, support, weight
+    - for linear codes min dist = min weight. cool. 
+    - inner-product orthogonality with dot-product mod 2
+    - dual code of C, self-dual codes
+    - Lemma 2 - words of a binary self-dual code C are vectors in null and row space of
+      any given generator matrix for C
+    - reliable correction of floor(d-1 / 2) errors per codeword
+    - equivalence of 2 codes - permutation of codeword coordinates
+    - automorphism of a code - coord perm that preserves original code
+
+    - Questions:
+        - How to find basis for subspace of F^n. how many vectors in subspace of given dim?
+        - put differently, what is the cardinality of a k-dim vector subspace of F^n
+        - parity check vs generator? Would a self-dual parity check be the generator matrix?
+        - what precisely is a vector space homomorphism?
+        - are vector space homomorphisms necessarily coordiate perms?
+        - what about distance-preserving vector space homomorphisms in particular?
+        - how to find all automorphisms?
+        - find the number of permutations exhausted by set of generator perms?
+
+
+The Hamming code and its automorphisms
+    - block-substitution model 
+    - epsilon perm -> cycles the generator matrix N
+    - eta is an automorphism that distorts N
+    - lifted normal subgroup (some intuition) can I understand this rigorously?
+    - |Aut(H)| = 1344
+    - quadratic residues mod 7 -> {1,2,4} -> P generator matrix of code V
+    - theta (related to eta) permutation is an automorphism
+    - equivalence of the two models
+    - eps and eta = omega^-1 * theta * omega
+    
+    - Questions:
+        - Why embedding H "into" V gives an isomorphism. again does dim => cardinality?
+        - review block designs
+
+
+3. The extended Golay Code and M24
+    - extended Golay 3-error correcting (24, 12, 8) code
+    - used in deep space communications, voyager 
+    - Given C is linear binary (24, 12, d) code the following are equivalent:
+        1) min weight of C is d = 8
+        2) C is equivalent to the Golay code 
+    - Theorem 2: The full automorphism group of the extended Golay code is isomorphic to M24
+
+Quadratic Residue model of Golay code
+    - {1,2,3,4,6,8,9,12,13,16,18}
+    - 12 rows of generator Q produced by permutation sigma = (1, 2, ..., 23)(24)
+    - ^ additional repeated application of sigma gives linear combs of Q
+    - So sigma is an automorphism of the quad residue model
+
+Block Substitution model of Golay code
+    - substitute blocks I, I_hat, J into hamming generator matrix H
+    - gives matrix G, a self-orthogonal code B with dim 12 and min dist d = 8.
+    - By THM 1, B is a Golay code
+    - Lemma 5, rho = (1,2,3)(4,5,6)...(22,23,24) is an automorphism of the block-substitution 
+      model of the extended Golay code
+    - Finding the equivalence map: combinatorial design
+    - Lemma 6, perm chi = (6,20,23,15)(7,12,11,8,22,19)(9,10)(16,24) takes B to R
+    - argue either by Lemma 1 and order <rho,tau> or by THM 2 and order <rho,tau>
+      that <rho, tau> =~ M24
+
+    - Questions:
+        - prove: if a perm maps each basis vector in C to a vec in C. Then its an Automorphism
+        - best strategy is to used the homomorphism property (h(ab) = h(a)h(b))
+
+
+Visualizing M24
+    - beaded ring visualization 
+    - Questions
+        - What is a stabalizer subgroup
+
+
+
