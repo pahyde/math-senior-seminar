@@ -174,6 +174,8 @@ indices = [i for i in range(24)]
 R = Golay_Model(Q).filter(Partition(indices, 24).target_weight(8))
 B = Golay_Model(G).filter(Partition(indices, 24).target_weight(8))
 
+print("words in B starting with 5 1s")
+print(B.filter(Partition([0,1,2,3,4], 24).target_weight(5)).get_words())
 # Defining the relavent partitions
 fixed = Partition([i-1 for i in [1,2,3,4,5,18,21]], 24)
 C     = Partition([i-1 for i in [6,9,10,15,16,17,20,21,23,24]], 24)

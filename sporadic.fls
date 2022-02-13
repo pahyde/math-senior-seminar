@@ -280,12 +280,12 @@ INPUT sporadic.bbl
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT stream.jpg
 INPUT ./stream.jpg
 INPUT ./stream.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT sporadic.aux
 INPUT ./sporadic.out
 INPUT ./sporadic.out
