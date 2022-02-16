@@ -32,9 +32,9 @@ Example Abstract. Abstract must not include subheadings or citations. Example Ab
 
 \paragraph{}
 
-An undergraduate student who has completed a course in abstract algebra will likely 
+Any undergraduate student who has completed a course in abstract algebra will likely 
 be familiar with the notion of a normal subgroup. 
-A typical textbook will introduce this 
+A typical introductory textbook will introduce this 
 concept early and 
 %thoroughly 
 emphasize its importance to fundamental 
@@ -42,7 +42,7 @@ ideas such as factor groups, cosets, and Lagrange's Theorem.
 %complementary 
 %The relationship between normal groups and factor groups is often especially emphasized. 
 %Readers of I.N. Hernstein's Topics in Algebra, for example, 
-In particular, students will see a variety of examples in which a normal subgroup N of a groups G, yields a factor group \( G / N \) comprised of cosets from the original group.
+In particular, students will see a variety of examples in which a normal subgroup N of a groups G, yields a factor group \( G / N \) comprised of cosets from the original group G.
 %In particular, a variety of examples in which a normal subgroup N of a groups G, yields a factor group \( G / N \) comprised of cosets from the original group G.
 \paragraph{}
 
@@ -52,7 +52,7 @@ example of this. The group can be obtained as a factor group, Z/5Z, from the gro
 Z with normal subgroup 5Z. 
 The notation of this construction seems to suggest that \( Z \) can be decomosed
 as a product of 'simpler' groups \( 5Z \) and \( Z_5 \). This feels analogous to 
-the way composite numbers can be decomposed into a product of smaller numbers. 
+the notion that composite numbers can be decomposed into a product of smaller numbers. 
 But this analogy begs the question. When does a group act like a prime number in the
 sense that it cannot be decomposed into simpler groups? %In pursuit of this question
 %Reflecting on this example, we might recognize that 
@@ -61,14 +61,14 @@ sense that it cannot be decomposed into simpler groups? %In pursuit of this ques
 %of smaller numbers. The student 
 We might notice that Lagrange's Theorem forbids \( Z_5 \) from 
 having a normal subgroup of its own due to its prime order. 
-\( Z_5 \) seems to be 'prime' or 'simple' in this way. 
-But this leads to more questions. Can we ascertain
+\( Z_5 \) seems to be an example of the prime number analogue we're looking for. 
+This result leads to more questions than answers. Can we ascertain
 which properties of  \( Z_5 \), such as it's cyclic nature or prime order, 
 generalize to other 'simple' groups? Moreover, can we ever know if 
 we've found all the groups with this property? For the case of "finite" simple groups,
 groups of finite order which don't permit a normal subgroup, it turns out that 
 we can. In fact, classifying
-these groups is a monsterous research topic which has been extensively studied over
+these groups is a monsterous problem which has been extensively researched over
 the past century.
 %This might suggest that Z5,  
 %a cyclic group of order 5, is analogous to a prime number whose only factors are trivial. 
@@ -124,12 +124,12 @@ construction for the Mathieu group \( M_{24} \).
 Building the Sporadic Group \( M_{24} \) will require some 
 introductory results and definitions from coding theory. 
 For this discussion, we
-focus on algebraic properties of codes and omit those relevant to
+limit our scope to the algebraic properties of codes and omit properties relevant to
 engineering applications. These properties are interesting but they are not
 relevant to the construction of \( M_{24} \). We begin with some notation and definitions.
 
 %\subsubsection*{Coding Theory}
-
+\smallbreak
 \noindent For simplicity, let \( F \) denote the field of binary numbers. Define addition and 
 multiplication on this field by
 \begin{figure}[ht]
@@ -173,7 +173,7 @@ multiplication on this field by
 \(S = \{[0,0,0], [1,0,0], [0,1,0], [1,1,0]\)
 is a binary code of length \( 3 \). 
 
- \noindent
+\smallbreak \noindent
 The vectors \( [0,0,0] \) and  \( [0,1,0] \) are
 codewords of \( S \). 
 The code \( S \) also happens to be closed under vector addition and scalar multiplication.
@@ -196,7 +196,7 @@ in a \textit{generator matrix} \( M \). One possible generator matrix for \( S \
         0 & 1 & 0
     \end{bmatrix}
 \] 
-
+\smallbreak
 \noindent Next, we address the \textit{minimum distance} for a linear code. 
 The \textit{distance} between two codewords \( c_1 \) and \( c_2 \), denoted \( \text{dist}(c_1,c_2) \),
 is the number of coordinates in which \( c_1 \) and \( c_2 \) differ. The \textit{weight} of 
@@ -227,11 +227,11 @@ In this case, the minimum distance is just the smallest \( weight \) of any code
 \end{remark}
 
 \subsection*{The Golay Code}
-
+\smallbreak
 The extended Golay Code will be instrumental in our construction of \( M_{24} \).
 It is a linear binary \( (24,12,8) \)-code that was introduced by 
 Marcel Golay in 1949. It is most easily assembled by the following greedy algorithm:
-
+\smallbreak
 \noindent First, write down the numbers \(0, 1, 2, ..., 2^{24}-1 \) and consider
 their representations as binary codewords of length 24. 
 %We will scan the list one by one and collect the codewords of the extended Golay code. 
@@ -241,7 +241,7 @@ of Golay codewords.
 Now scan the values  \( 1, 2, ..., 2^{n-1} \)
 and add any value to the collection with distance at least \( 8 \) from any of the 
 previously collected codewords. The resulting collection will be the extended Golay code.
-
+\smallbreak
 \noindent
 The extended Golay code belongs to a special class of linear codes called \textit{self-dual} codes.
 This property gives us a computationally inexpensive method for recognizing Golay codewords.
@@ -256,7 +256,7 @@ are orthogonal to any given generator matrix for the Golay code.
 \end{definition} 
 
 \subsection*{Equivalent Codes and Automorphisms}
-
+\smallbreak
 \begin{definition}[Equivalent Linear Codes]
     Two Linear Binary Codes \( C \) and \( D \) of length \( n \) are \textit{equivalent}
     if a coordinate permutation on the codewords of \( C \) produces the codewords in \( D \).  
@@ -300,7 +300,7 @@ are orthogonal to any given generator matrix for the Golay code.
 
 
 \subsection*{The extended Golay code revisited}
-
+\smallbreak
 We will now explore some properties of the extended Golay code in light of \textit{equivalence} and 
 \textit{automorphisms}.
 Earlier we mentioned that the extended Golay code is an example of a \( (24,12,8) \)-code. We 
@@ -333,7 +333,7 @@ Thus we might attempt to build \( M_{24} \) by choosing the 'right' pair of auto
 that they might exhaust all elements of Aut(\( G \)). 
 Such a pair would also generate \(M_{24} \).
 \subsection*{Building the Sporadic Group}
-
+\smallbreak
 \noindent We now have the necessary vocabulary to disscuss a construction of \( M_{24} \). In fact, we will
 build the group outright. \\
 \noindent After expanding on the coding theory
@@ -361,7 +361,7 @@ the extended Golay code.
 To this end we introduce two new models of the extended Golay code.
 
 \subsection*{Quadratic Residue Model (R)}
-
+\smallbreak
 \noindent The Quadratic Residue model is almost exactly the model originally proposed by
 Marcel Golay. The generator matrix for the code is produced by the set \( \{ 1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18 \} \),
 the set of numbers  \( q \) which allow integers solutions to
@@ -385,13 +385,12 @@ an additional one in position \( 24 \), and the remaining positions zero. The ne
         0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&0&0&0& & 1 \\
         0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&0&0& & 1 \\
         0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&0& & 1 \\
-        ... \\
-        %0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1& & 1 \\
-        %1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0& & 1 \\
-        %0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1& & 1 \\
-        %1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0& & 1 \\
-        %0&1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0& & 1 \\
-        %0&0&1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1& & 1 \\
+        0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1& & 1 \\
+        1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0& & 1 \\
+        0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1& & 1 \\
+        1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0& & 1 \\
+        0&1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0& & 1 \\
+        0&0&1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1& & 1 \\
         1&0&0&1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1& & 1\\ 
     \end{bmatrix}
 \] 
@@ -403,7 +402,7 @@ the basis codewords of \( Q \) to a new linearly independent basis. By Lemma 1, 
 on the extended Golay code.
 
 \subsection*{Block-Substitution Model (B)}
-
+\smallbreak
 \noindent We now turn our attention to the Block-Substitution model of the Golay code.
 This model was introduced by the authors of "Build a Sporadic Group in Your Basement."
 We proceed by substituting the \( 3 x 3  \) matrix blocks
@@ -443,8 +442,29 @@ We proceed by substituting the \( 3 x 3  \) matrix blocks
         0 & 0 & 0 & I & I & I & J & \overline{I}
     \end{bmatrix}
 \] 
+\iffalse
+\noindent to obtain
 
+\setlength\arraycolsep{0.5pt}
+\[
+    G = \begin{bmatrix}
+        1&0&0&0&0&0&0&0&0&0&0&0&0&1&1&1&0&0&1&0&0&1&1&1\\
+        0&1&0&0&0&0&0&0&0&0&0&0&1&0&1&0&1&0&0&1&0&1&1&1\\
+        0&0&1&0&0&0&0&0&0&0&0&0&1&1&0&0&0&1&0&0&1&1&1&1\\
+        0&0&0&1&0&0&0&0&0&0&0&0&1&1&1&0&1&1&1&0&0&1&0&0\\
+        0&0&0&0&1&0&0&0&0&0&0&0&1&1&1&1&0&1&0&1&0&0&1&0\\
+        0&0&0&0&0&1&0&0&0&0&0&0&1&1&1&1&1&0&0&0&1&0&0&1\\
+        0&0&0&0&0&0&1&0&0&0&0&0&1&0&0&1&1&1&0&1&1&1&0&0\\
+        0&0&0&0&0&0&0&1&0&0&0&0&0&1&0&1&1&1&1&0&1&0&1&0\\
+        0&0&0&0&0&0&0&0&1&0&0&0&0&0&1&1&1&1&1&1&0&0&0&1\\
+        0&0&0&0&0&0&0&0&0&1&0&0&1&0&0&1&0&0&1&1&1&0&1&1\\
+        0&0&0&0&0&0&0&0&0&0&1&0&0&1&0&0&1&0&1&1&1&1&0&1\\
+        0&0&0&0&0&0&0&0&0&0&0&1&0&0&1&0&0&1&1&1&1&1&1&0\\
+    \end{bmatrix}
+\] 
+\fi
 
+\bigbreak
 \noindent
 The result is our generator matrix G for the Block-Substitution model.
 Again, we will seek an automorphism that preserves the basis codewords of our generator matrix
@@ -457,24 +477,26 @@ Indeed, this permutation completely preserves the row vectors of \( G \). Moreov
 of the two permutation we saw early which the authors use to build \( M_{24} \). 
 
 \subsection*{Taking Stock}
-
+\smallbreak
 \noindent
 We now have two automorphisms, \( \sigma \) and \( \rho \), which operate on distinct Golay
 code models \( R \) and \( B \).
-
+\smallbreak
 \noindent
 Both of these permutations fell naturally out of their respective Golay code models. 
-The hope is that
+The hope presented in BSGYB is that
 the models \( R \) and \( B \) might be "different" enough that their corresponding automorphisms
 would generate the full Golay code automorphism group.
-We cannot directly compose these permutations, though, because
-they operate on 
-distinct codewords. % they do not preserve any useful structure.
-Instead we will seek an equivalence map from \( B \) to \( R \). The resulting map can 
-then be used to express \( \sigma \) as an automorphism on the code  \( B \). 
+We might be tempted
+to compose these permutations directly to this end. However this approach
+would be meaningless. \( \sigma \) and \( \rho \) operate on 
+distinct codes so they do not preserve any useful structure.
 
+\smallbreak
 \noindent 
-More precisely, for an equivalence map, \( \chi \): \( B \to R \), and an automorphism \( \sigma \)
+Instead we will seek an equivalence map from \( B \) to \( R \). The resulting map can 
+then be used to express \( \sigma \) as an automorphism on the code  \( B \). More precisely,
+for an equivalence map, \( \chi \): \( B \to R \), and an automorphism \( \sigma \)
 on \( R \), we are gauranteed that \( \chi^{-1} \sigma \chi \) will be an automorphism
 on \( B \). This follows because \( \chi^{-1} \sigma \chi \) is injective and maps codewords of 
 \( B \) back into \( B \).
@@ -483,7 +505,7 @@ Moreover, Theorem 1 promises that this equivalence map exists for our two
 
 
 \subsection*{Bridging the gap from B to R}
-
+\smallbreak
 \noindent
 Finding an equivalence map from \( B \) to \( R \) is a computationally difficult problem.
 We're looking for some permutation, \( \chi \), which maps each of the \( 2^{12} \) 
@@ -492,7 +514,7 @@ Fortunately, equivalence maps between Golay codes cannot be unique.
 Any single equivalence map \( \kappa: B \to R\) can be combined with a
 permutation  \( \beta \in Aut(R) \) so that  \( \beta \kappa \) is also an equivalence map.
 Still, we expect valid choices for \( \chi \) to be sparse.
-
+\smallbreak
 \noindent
 A brute force approach would require searching %through 
 the entire space of \( 24! \) permutations.
@@ -501,7 +523,7 @@ to words generated by \( Q \). %to codewords in \( R \).
 Definition 3 makes this easy since the codewords generated by \( Q \) are exactly the words which are orthogonal to \( Q \). %we just check that the images of rows in \( G \) are orthogonal to the matrix \( Q \). 
 However, this added convenience
 will only be useful once we find a stronger set of constraints to narrow the search space. % strategy for traversing the search space.
-
+\smallbreak
 \noindent
 We can begin by making a tactical guess. The intersection of our two Golay models, 
 \( B \cap R \), contains exactly 4 codewords generated by the basis \( \hat{1} = [1, 1, ..., 1]\) and 
@@ -515,16 +537,16 @@ and zero coordinates of \( \hat{z} \), given respectively by
     D &= \{1, 4, 5, 7, 8, 11, 12, 13, 14, 18, 19, 22\}
 \end{align*}
 
-\noindent Coordinates in \( C \) must be sent to \( C \) and coordinates 
+\noindent so that coordinates in \( C \) must be sent to \( C \) and coordinates 
 in \( D \) must be sent to \( D \). This drastically reduces the search space from \( 24! \)
 to  \( (12!)^2 \) possible permutations to consider. This is an improvement but we can do
-better by appealing to properties of \( M_{24} \).
-
+better by observing some properties of the automorphism group on the extended Golay code.
+\smallbreak
 \noindent
-The original construction of \( M_{24} \) is well-known to be a 
+The original construction of the Mathieu group \( M_{24} \) is well-known to be a 
 \textit{5-transitive} permutation group. This property gaurantees that for 
 distict elements \( x_1,x_2,x_3,x_4,x_5 \) and distinct elements \( y_1,y_2,y_3,y_4,y_5 \)
-chosen from \( \{1,2, ..., 24\} \), there is a permutation in \( M_{24} \) which
+chosen from the set \( \{1,2, ..., 24\} \), there is a permutation in \( M_{24} \) which
 takes the ordered tuple \( (x_1,x_2,x_3,x_4,x_5) \) to the ordered tuple 
 \( (y_1,y_2,y_3,y_4,y_5) \). Theorem 2 tells us that this property also holds for
 coordinate permutations of the
@@ -532,7 +554,7 @@ automorphism group of the code \( R \). In particular, we can always find a perm
 \( \alpha \in Aut(R) \) which takes a given ordered tuple of 
 coordinates \( (i_1, i_2, i_3, i_4, i_5) \) to the coordinates \( (1, 2, 3, 4, 5) \).
 
-
+\smallbreak
 \noindent
 This property allows for another simplifying assumption. 
 Earlier we mentioned that an equivalence map \( \kappa: B \to R \) can be combined with
@@ -555,10 +577,10 @@ This is just the result of moving the coordinates \( 1 - 5 \)
 from our original \( C \) and \( D \) to the set of fixed coordinates \( F \).
 Note that this is consistent with the hypothesis that \( \chi\) sends \( \hat{z} \) 
 to \( \hat{z} \).
- \noindent
-Moving forward, we will need to borrow some tools from combinatorics to 
-deduce the mappings of individual coordinates in \( C \) and \( D \).
-The codewords of minimum weight \( d = 8 \) of any Golay code form a 
+\smallbreak \noindent
+We would now like a method to systematically deduce the mappings of individual
+coordinates in \( C \) and \( D \). We will find that tools from combinatorics will
+be helpful. The codewords of minimum weight \( d = 8 \) of any Golay code form a 
 \( t \) - \( (v, k, \lambda) \) combinatorial block design with parameters 
 \( t = 5, v = 24, k = 8 \) and  \( \lambda = 1 \).
 For our purposes, this simply means that for a Golay code model, \( M \), and an
@@ -597,7 +619,8 @@ nonzero coordinates \( \{18, 21, 24\} \to \{16, 18, 21\} \). Moreover, coordinat
 is determined. We are uncertain about the exact determination of \( \{21, 24\} \to \{16, 21\} \)
 however the authors argue that additional fixed points are to be expected. Thus we make another 
 simplifying guess and suppose that \( 21 \) is fixed while  \( 24 \to 16 \).
-This yields the updated constraints
+This new information yields the following updated constraints on our desired
+equivalence map \( \chi \)
 \[
     F = \{1, 2, 3, 4, 5, 18, 21\} \quad
     C = \{6, 9, 10, 15, 16, 17, 20, 23, 24\}   \quad
@@ -609,36 +632,28 @@ We've added two additional fixed coordinates. We could attempt to exploit
 this by matching a new pair of codewords in \( B^\prime \) and \( R^\prime \) 
 by a different 5-tuple of coordinates from \( F \), say \( (1, 2, 3, 18, 21) \).
 But, this would yield the same mapping we found above.
-Instead, we can search for codewords with only 4 coordinates of \( F \) nonzero. % in \( B^\prime \) and \( R^\prime \) containing
-%ones in exactly 4 coordinates \(\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \in\) \( F \), all others zero. 
-It can be shown that for 
-any choice of these 4 coordinates, \( B^\prime \) and  \( R^\prime \)
+Instead, we can search for codewords in \( B^\prime \) and \( R^\prime \) containing
+ones in exactly 4 coordinates \(\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \in\) \( F \),
+all others zero. It can be shown that for 
+any choice of \(\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \in F\), \( B^\prime \) and  \( R^\prime \)
 each contain \( 4 \) codewords meeting this criteria 
-(see Theorem 3 in the mathematical comments). 
-We can narrow this to 3 or even 2 unique codewors if we enforce addition constraints on \( C \) and \( D \). 
- \noindent
- %mappings narrow down a potential mapping to two corresponding codewords in \( B^\prime \) and \( R^\prime \). 
-The authors take one of many paths following this strategy. %instantiate this general strategy by 
+(see proof 1.1 in the mathematical comments section). 
+\smallbreak \noindent
+Pairing this tactic with contraints on nonzero coordinates in \( C \) and \( D \) 
+can reveal correspondences between sets of 3 or even 2 codewords in \( B^\prime \) and 
+ \( R^\prime \). %mappings narrow down a potential mapping to two corresponding codewords in \( B^\prime \) and \( R^\prime \). 
+The authors take one of may paths following this general strategy. %instantiate this general strategy by 
 They begin by searching for codewords with
 nonzero coordinates intersecting \( F \) in exactly 4 elements and intersecting
 \( C \) in exactly 1. 
-\( B^\prime \) and \( R^\prime \) each contain 8 pairs of codewords that meet these constraints.
-They are paired by the particular choice of nonzero coordinates from the set \( F \). 
 This reveals 4 independent mappings of the form
 \( \{b_1, b_2\} \to \{r_1, r_2\} \) where \( b_1,b_2 \in B^\prime \) and \( r_1,r_2 \in R^\prime \).
-Each of these mappings must send the respective nonzero coordinates in \( C \) back to \( C \).
-Thus, 2 possible mappings for these coordinates are possible. 
-The authors proceed with some arguably arbitrary guesses
-about the correspondence of these pairs (I discuss this in the next section and provide a more exhaustive approach). They eventually deduce the equivalence 
-map \( \chi = (6, 20, 23, 15)(7, 12, 11, 8, 22, 19)(9, 10)(16, 24) \). 
-A quick matrix multiplication verifies that this permutation sends the rows of \( G \) 
-to orthogonal codewords of \( Q \).
-It is an equivalence map taking \( B \to R\). Also
-\[
-    \chi^{-1} \sigma \chi = (1, 2, 3, 4, 5, 15, 19, 11, 10, 9, 12, 7, 13, 14, 23, 24, 17, 18, 22, 6, 21, 8, 20)(16)
-\] 
-is an automorphsm on \( B \).  This is exactly the permutation \( \tau \) which we used to construct \(  M_{24}. \)
-
+Each of these mappings must send the respective nonzero coordinates in \( C \) back to 
+coordinates in \( C \).
+Thus, 2 possible mapping are revealed for the nonzero coordinates of \( b_1 \) and \( b_2 \) 
+contained in \( C \). The authors couple this iterative process with some, arguably arbitrary,
+guess work, and eventually present the following equivalence permutation \( \chi \). We
+should observe that this mapping is consistent with our assumptions up to this point.
 
 
 
@@ -651,86 +666,58 @@ is an automorphsm on \( B \).  This is exactly the permutation \( \tau \) which 
 
 
 \section*{Mathematical Comments}
-\[
-    F = \{1,2,3,4,5,18,21\} 
-\] 
-
-\begin{theorem}
-Suppose that \( \text{f} = \{\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4\} \) is a set 
+\[F = \{1, 2, 3, 4, 5, 18, 21\} \quad\]
+Let \( \text{f} = (\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4) \) be an ordered tuple 
 of distinct coordinates chosen from \( F \).
-Then \( B^\prime \) and  \( R^\prime \)
+We will show that \( B^\prime \) and  \( R^\prime \)
 each contain \( 4 \) codewords having ones at the coordinates \( \text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \) and
 zeros at coordinates \( F \setminus \{ \text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \} \).
-\end{theorem}
-\begin{proof}
-For convenience, we will prove the result for \( B^\prime \) and then generalize the result
-to \( R^\prime \). They are both sets of mimimum-weight Golay code words which form a
-\( 5 - (24,8,1) \) block design. Thus, they are interchangeable for our purposes.\\
-Let \( \text{f} = \{\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4\} \) be any set of 4 coordinates in \( F \).
-First we show that \( B^\prime \) contains exactly 5 words which are full-weight at 
-\( \text{f} \). We call a word \textit{full-weight} at a set of coordinates if
-it has all ones at those coordinates. Also, we call sets of \( n \) coordinates
-\( n \)-sets.
- \noindent
-Codewords of \( B^\prime \) have weight \( d = 8 \ge 5 \). 
-Thus a codeword \( c \) in \( B^\prime \) 
-is full-weight at \( \text{f} \) \textit{iff} \( c \) is full-weight at a 5-set
-containing  \( \text{f} \). So the number of words that are full-weight
-at \( \text{f} \) is exactly the number of words that are full-weight at a 5-set 
-containing \( \text{f} \).
+To see this, let \( \text{f} = (\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4) \) 
+be any 4-tuple of coordinates in \( F \).
+We would like to know how many words in \( B^\prime \)
+are full-weight at \( \text{f} \), where \textit{full-weight} denotes the property of having
+all 1s at the coordinates of \( \text{f} \).
+\smallbreak \noindent
+Codewords of \( B^\prime \) have weight \( d = 8 \ge 5 \). Thus a codeword \( c \) in \( B^\prime \) 
+is full-weight at \( \text{f} = (\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4) \) if and only if \( c \) is full-weight at a 5-tuple of 
+coordinates containing  \( \text{f} \).
 We have 24 total coordinates so there are \( 24 - 4 = 20 \) different
-5-sets containing \( \text{f} \).
-Each 5-set selects a single word which is full-weight at that 5-set, but multiple 5-sets 
-may select the same word.
-Any word containing one of our \( 20 \) 5-sets must also contain \( \text{f} \)
-and therefore contain \( 8 - 4 = 4 \) of our \( 20 \) 5-sets containing \( \text{f} \).
-So our \( 20 \) 5-sets come in multiples of  \( 4 \) which will be full-weight on the same 
-word. Hence, there are  \( \frac{20}{4} = 5 \) words which are full-weight at 5-sets containing \( \text{f} \)
-\( \implies \) there are exactly 5 words in \( B^\prime \) which are full-weight at \( \text{f} \).
-overlapping 5-tuples. This implies that the same is true for \( R^\prime \). 
-Now, for any choice of \( \text{f} \), then \(b_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1] \)
-and \(r_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0] \) which are known to be in \( B^\prime \) and \( R^\prime \)
-respectively will 1 of the 5 full-weight words at \( f \). If we then restrict the coordinates
-at \( F \setminus \text{f} \) to be all zero, then these words vanish but the others must 
-remain. \( b_1  \) and \( r_1 \) can be the only words in \( B^\prime \) and \( R^\prime \) 
-with 5 or more nonzero coordinates in  \( F \). Hence \( B^\prime \) and \( R^\prime \)
-each contain \( 5 - 1 = 4 \) codewords having ones at \( \text{f} \) and zeros at \( F \setminus \text{f} \).
-\end{proof}
+coordinate 5-tuples containing \( \text{f} \). We are guaranteed that for each 5-tuple in this set, \( B^\prime \) contains
+a single codeword that is full-weight at that tuple. Thus we have at most \( 20 \) codewords
+in \( B^\prime \) which are full-weight at  \( \text{f} \). The exact number is much smaller, 
+though, becuase many of these 5-tuples overlap on the same codeword. 
+In fact, any single codeword containing \( \text{f} \) must contain \( 8 - 4 = 4 \)
+overlapping 5-tuples. So there are \( \frac{20}{4} = 5 \) codewords in \( B^\prime \) 
+which are full-weight at \( \text{f} \). 
+Insisting that the coordinates of \( F \)
 
 \subsection*{Build a Sporadic Group in your Kaggle Notebook}
-I chose the paper "Build a Sporadic Group in Your Basement" because I wanted to 
-know more about the classification of the finite simple groups. It's fascinating to
-me that such an abstract classification of symmetry would have 26 outliers.
-For this reason, I never expected to derive so much enjoyment from the problem of
-reverse engineering an equivalence map \( \chi \) between the codes \( B \) and \( R \).
-I noticed that the authors use a lot of strategic guessing to narrow down the space of 
-possibilities. This feels reasonably necessary, at least in order to establish the sets 
-\( F = \{1, 2, 3, 4, 5, 18, 21\}\), \(C = \{6,9,10,15,16,17,20,21,23,24\}\), \(D = \{7,8,11,12,13,14,18,19,22\} \) 
-and the particular mapping \( \chi: 20 \to 16 \). The paper then introduces a brilliant
-strategy to pair words in \( B^\prime \) and  \( R^\prime \) (weight 8 words in \( B \) and \( R \))
-intersecting  \( F \) in four nonzero
-coordinates and \( C \) in one nonzero coordinate. What follows from this is a ton of educated
-guessing. I wanted to feel like I was building \( M_{24} \)
-from the ground up and these guesses felt a bit contrived. I decided to take their specific
-strategy of constraining \( F \) and isolating coordinates in \( C \) and
-run with it to create a python program that would find \( \chi \) for me. In particular I
-apply the same strategy to coordinates in \( D \) as well.
-The results of this program are given in the following Kaggle notebook.
-First I needed to write some classes to represent the structure of the Golay codes and 
-also the partitions \( F,C,D \). Then the algorithm proceeds by establishing a key value
-map, "from\_to\_map", which associates coordinates in the domain of \( \chi \) with sets of 
-potential mappings in the codomain. We don't assume anything to begin with so we initilize the following. 
-Note that I'm using 0-indexing for this program.
-\[
-    \text{from\_to\_map} = \{ 0: \text{Infinite\_Set(), } 1: \text{Infinite\_Set(), } 2: \text{Infinite\_Set(), } ..., 23: \text{Infinite\_Set()} \}
-\] 
-
-
 
 %\item First item
 %\item Second item
 %\end{itemize}
 
+
+\section*{Discussion}
+
+We have 24 coordinates so any particular 4-tuple is contained in \( 24 - 4 = 20 \) 
+different 5-tuples.
+uniquely determines a codeword 
+we know it shows up in at least 20 codewords, 
+\smallbreak
+however many of these 5-tuples may overlap
+on the same codeword. Any single codeword containing this 4-tuple must contain (8 - 4 = 4)
+of these 5-tuples. In other words, any codeword having all 1s at \(i_1,i_2,i_3,and i_4\)
+will correspond to correspond to 4 of these 5-tuples. Thus B and R will contain \(\frac{20}{4}=5\)
+codewords with all 1's at any given 4 tuple. If we also specify that no 5-tuple contained in
+\( F \) is all 1s then we have \( 5-1=4 \) possible words.
+
+
+The Discussion should be succinct and must not contain subheadings.
+
+\section*{Methods}
+
+Topical subheadings are allowed. Authors must ensure that their Methods section includes adequate experimental and characterization data necessary for others in the field to reproduce their work.
 
 \bibliography{sample}
 
