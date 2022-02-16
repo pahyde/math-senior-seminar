@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex sporadic"] 1644981442 "sporadic.aux" "sporadic.bbl" "sporadic" 1644987418
+["bibtex sporadic"] 1644994594 "sporadic.aux" "sporadic.bbl" "sporadic" 1644994649
   "./naturemag-doi.bst" 1644363596 36153 a59af0557a0f0c0e857533e984f737bb ""
   "sample.bib" 1644363596 604 dd7681d9cb62086108bc9b881e2ad28d ""
-  "sporadic.aux" 1644987418 1948 38671d746036624914bc3d48a384cfca ""
+  "sporadic.aux" 1644994649 1948 38671d746036624914bc3d48a384cfca ""
   "sporadic.bcf" 0 -1 0 ""
   (generated)
   "sporadic.blg"
   "sporadic.bbl"
-["pdflatex"] 1644987418 "sporadic.tex" "sporadic.pdf" "sporadic" 1644987418
+["pdflatex"] 1644994649 "sporadic.tex" "sporadic.pdf" "sporadic" 1644994649
   "/etc/texmf/web2c/texmf.cnf" 1580341501 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -156,10 +156,10 @@
   "jabbrv-ltwa-all.ldf" 1644363596 49107 ef89484545be005458b7162f37634c99 ""
   "jabbrv-ltwa-en.ldf" 1644363596 268657 c239d07b7cc89e14f920c5fc8ed8d12e ""
   "jabbrv.sty" 1644363596 15480 2106da179daf9d5a102407956ba23e0c ""
-  "sporadic.aux" 1644987418 1948 38671d746036624914bc3d48a384cfca ""
-  "sporadic.bbl" 1644981442 753 20a6b7c5922cff01f2a6c36298a34884 "bibtex sporadic"
-  "sporadic.out" 1644987418 45 68e085d08054d78611367a3a7cbb00eb ""
-  "sporadic.tex" 1644987417 40207 ece9dfc8693e26c9363d703f08b4b016 ""
+  "sporadic.aux" 1644994649 1948 38671d746036624914bc3d48a384cfca ""
+  "sporadic.bbl" 1644994594 753 20a6b7c5922cff01f2a6c36298a34884 "bibtex sporadic"
+  "sporadic.out" 1644994649 45 68e085d08054d78611367a3a7cbb00eb ""
+  "sporadic.tex" 1644994648 41551 705ea3488c7c92c1aa5ec869e1e02b59 ""
   "stream.jpg" 1644363596 379752 0d2b78190bb8e3a8b437b513aa4c6aaa ""
   "wlscirep.cls" 1644363596 5824 2bca8e85f20d8d313a7747a78c480ad7 ""
   (generated)
