@@ -651,51 +651,51 @@ is an automorphsm on \( B \).  This is exactly the permutation \( \tau \) which 
 
 
 \section*{Mathematical Comments}
-\[
-    F = \{1,2,3,4,5,18,21\} 
-\] 
+%\[
+%    F = \{1,2,3,4,5,18,21\} 
+%\] 
 
-\begin{theorem}
-Suppose that \( \text{f} = \{\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4\} \) is a set 
-of distinct coordinates chosen from \( F \).
-Then \( B^\prime \) and  \( R^\prime \)
-each contain \( 4 \) codewords having ones at the coordinates \( \text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \) and
-zeros at coordinates \( F \setminus \{ \text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \} \).
-\end{theorem}
-\begin{proof}
-For convenience, we will prove the result for \( B^\prime \) and then generalize the result
-to \( R^\prime \). They are both sets of mimimum-weight Golay code words which form a
-\( 5 - (24,8,1) \) block design. Thus, they are interchangeable for our purposes.\\
-Let \( \text{f} = \{\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4\} \) be any set of 4 coordinates in \( F \).
-First we show that \( B^\prime \) contains exactly 5 words which are full-weight at 
-\( \text{f} \). We call a word \textit{full-weight} at a set of coordinates if
-it has all ones at those coordinates. Also, we call sets of \( n \) coordinates
-\( n \)-sets.
- \noindent
-Codewords of \( B^\prime \) have weight \( d = 8 \ge 5 \). 
-Thus a codeword \( c \) in \( B^\prime \) 
-is full-weight at \( \text{f} \) \textit{iff} \( c \) is full-weight at a 5-set
-containing  \( \text{f} \). So the number of words that are full-weight
-at \( \text{f} \) is exactly the number of words that are full-weight at a 5-set 
-containing \( \text{f} \).
-We have 24 total coordinates so there are \( 24 - 4 = 20 \) different
-5-sets containing \( \text{f} \).
-Each 5-set selects a single word which is full-weight at that 5-set, but multiple 5-sets 
-may select the same word.
-Any word containing one of our \( 20 \) 5-sets must also contain \( \text{f} \)
-and therefore contain \( 8 - 4 = 4 \) of our \( 20 \) 5-sets containing \( \text{f} \).
-So our \( 20 \) 5-sets come in multiples of  \( 4 \) which will be full-weight on the same 
-word. Hence, there are  \( \frac{20}{4} = 5 \) words which are full-weight at 5-sets containing \( \text{f} \)
-\( \implies \) there are exactly 5 words in \( B^\prime \) which are full-weight at \( \text{f} \).
-overlapping 5-tuples. This implies that the same is true for \( R^\prime \). 
-Now, for any choice of \( \text{f} \), then \(b_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1] \)
-and \(r_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0] \) which are known to be in \( B^\prime \) and \( R^\prime \)
-respectively will 1 of the 5 full-weight words at \( f \). If we then restrict the coordinates
-at \( F \setminus \text{f} \) to be all zero, then these words vanish but the others must 
-remain. \( b_1  \) and \( r_1 \) can be the only words in \( B^\prime \) and \( R^\prime \) 
-with 5 or more nonzero coordinates in  \( F \). Hence \( B^\prime \) and \( R^\prime \)
-each contain \( 5 - 1 = 4 \) codewords having ones at \( \text{f} \) and zeros at \( F \setminus \text{f} \).
-\end{proof}
+%\begin{theorem}
+%Suppose that \( \text{f} = \{\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4\} \) is a set 
+%of distinct coordinates chosen from \( F \).
+%Then \( B^\prime \) and  \( R^\prime \)
+%each contain \( 4 \) codewords having ones at the coordinates \( \text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \) and
+%zeros at coordinates \( F \setminus \{ \text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4 \} \).
+%\end{theorem}
+%\begin{proof}
+%For convenience, we will prove the result for \( B^\prime \) and then generalize the result
+%to \( R^\prime \). They are both sets of mimimum-weight Golay code words which form a
+%\( 5 - (24,8,1) \) block design. Thus, they are interchangeable for our purposes.\\
+%Let \( \text{f} = \{\text{f}_1,\text{f}_2, \text{f}_3,\text{f}_4\} \) be any set of 4 coordinates in \( F \).
+%First we show that \( B^\prime \) contains exactly 5 words which are full-weight at 
+%\( \text{f} \). We call a word \textit{full-weight} at a set of coordinates if
+%it has all ones at those coordinates. Also, we call sets of \( n \) coordinates
+%\( n \)-sets.
+% \noindent
+%Codewords of \( B^\prime \) have weight \( d = 8 \ge 5 \). 
+%Thus a codeword \( c \) in \( B^\prime \) 
+%is full-weight at \( \text{f} \) \textit{iff} \( c \) is full-weight at a 5-set
+%containing  \( \text{f} \). So the number of words that are full-weight
+%at \( \text{f} \) is exactly the number of words that are full-weight at a 5-set 
+%containing \( \text{f} \).
+%We have 24 total coordinates so there are \( 24 - 4 = 20 \) different
+%5-sets containing \( \text{f} \).
+%Each 5-set selects a single word which is full-weight at that 5-set, but multiple 5-sets 
+%may select the same word.
+%Any word containing one of our \( 20 \) 5-sets must also contain \( \text{f} \)
+%and therefore contain \( 8 - 4 = 4 \) of our \( 20 \) 5-sets containing \( \text{f} \).
+%So our \( 20 \) 5-sets come in multiples of  \( 4 \) which will be full-weight on the same word. 
+%Hence, there are  \( \frac{20}{4} = 5 \) words which are full-weight at 5-sets containing \( \text{f} \)
+%\( \implies \) there are exactly 5 words in \( B^\prime \) which are full-weight at \( \text{f} \).
+%overlapping 5-tuples. This implies that the same is true for \( R^\prime \). 
+%Now, for any choice of \( \text{f} \), then \(b_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1] \)
+%and \(r_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0] \) which are known to be in \( B^\prime \) and \( R^\prime \)
+%respectively will 1 of the 5 full-weight words at \( f \). If we then restrict the coordinates
+%at \( F \setminus \text{f} \) to be all zero, then these words vanish but the others must 
+%%remain. \( b_1  \) and \( r_1 \) can be the only words in \( B^\prime \) and \( R^\prime \) 
+%with 5 or more nonzero coordinates in  \( F \). Hence \( B^\prime \) and \( R^\prime \)
+%each contain \( 5 - 1 = 4 \) codewords having ones at \( \text{f} \) and zeros at \( F \setminus \text{f} \).
+%\end{proof}
 
 \subsection*{Build a Sporadic Group in your Kaggle Notebook}
 I chose the paper "Build a Sporadic Group in Your Basement" because I wanted to 
@@ -717,7 +717,7 @@ run with it by creating a python program that would find \( \chi \) for me. In p
 apply the same strategy to coordinates in \( D \) as well.
 The results of this program are given in the following Kaggle notebook.
 %First I needed to write some classes to represent the structure of the Golay codes and also the partitions \( F,C,D \). 
-Then the algorithm proceeds by establishing a key value
+The algorithm proceeds by establishing a key value
 map, "from\_to\_map", which associates coordinates in the domain of \( \chi \) with sets of 
 potential mappings in the codomain. We don't assume anything to begin with so we initilize the following. 
 Note that I'm using 0-indexing where the \( i\text{th} \) index represents coordinate \( i + 1 \).
@@ -739,7 +739,28 @@ denoted \( c_b^* \), must
 map to those of \( r \in R^* \), denoted \( c_r^* \). For each each index, \( i \), representing 
 the coordinates in \( c_b^* \), we update  
 \( \text{from\_to\_map}[i] = \text{from\_to\_map}[i] \cap c_r^* \). The result of this
-computation is gives
+computation gives
+\begin{align*}
+    \text{from\_to\_map} = \{0&: \{0\}, 1: \{1\}, 2: \{2\}, 3: \{3\}, 4: \{4\}, 5: \{16, 19\}, 6: \{18, 11\}, 7: \{12, 21\}, 8: \{9, 23\},  \\
+                             9&: \{8, 5\}, 10: \{10, 7\}, 11: \{10, 7\}, 12: \{12, 21\}, 13: \{13, 6\}, 14: \{8, 5\}, 15: \{9, 23\}, 16: \{16, 19\}, \\
+                            17&: \{17\}, 18: \{13, 6\}, 19: \{22, 14\}, 20: \{20\}, 21: \{18, 11\}, 22: \{22, 14\}, 23: \{15\}\}
+\end{align*}
+For every coordinate in the domain, we've established either an exact mapping or a pair of
+coordinates in the codomain. Also, each pair in the codomain is mapped to by two coordinates
+in the domain. Collecting these domain pairs together and isolating determined and 
+undetermined mappings yields the representation
+\begin{align*}
+    \text{determined} &= \{0 \to 0, 1 \to 1, 2 \to 2, 3 \to 3, 4 \to 4, 17 \to 17, 20 \to 20, 23 \to 15 \}\\
+    \text{undetermined} &= \{\{5, 16\} \to \{16, 19\}, \{6, 21\} \to \{18, 11\}, \{7, 12\} \to \{12, 21\}, \{8, 15\} \to \{9, 23\}, \\
+      & \{9, 14\} \to \{8, 5\}, \{10, 11\} \to \{10, 7\}, \{13, 18\} \to \{13, 6\}, \{19, 22\} \to \{22, 14\} \} \}
+\end{align*}
+Apparently we are only \( 8 \) binary choices away from determining a potential equivalence 
+map  \( \chi \). We can generate each of these 256 possible mappings and test them against 
+the generator matrices \( G \) and \( Q \) without breaking a sweat. At least our CPUs can. 
+I use a bitmask of length 8 to generate the candidates and then verify mappings which take 
+the rows of \( G \) to orthogal codewords of  \( Q \). It was no surprise that this computation produced
+the equivalence map \( \chi \) presented by the authors of the paper. What was surpising to
+me is that the algorithm also produced a second candidate equivalence map given by
 %\item First item
 %\item Second item
 %\end{itemize}

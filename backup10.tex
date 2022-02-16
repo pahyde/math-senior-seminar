@@ -684,17 +684,17 @@ Each 5-set selects a single word which is full-weight at that 5-set, but multipl
 may select the same word.
 Any word containing one of our \( 20 \) 5-sets must also contain \( \text{f} \)
 and therefore contain \( 8 - 4 = 4 \) of our \( 20 \) 5-sets containing \( \text{f} \).
-So our \( 20 \) 5-sets come in multiples of  \( 4 \) which will be full-weight on the same 
-word. Hence, there are  \( \frac{20}{4} = 5 \) words which are full-weight at 5-sets containing \( \text{f} \)
+%So our \( 20 \) 5-sets come in multiples of  \( 4 \) which will be full-weight on the same word. 
+Hence, there are  \( \frac{20}{4} = 5 \) words which are full-weight at 5-sets containing \( \text{f} \)
 \( \implies \) there are exactly 5 words in \( B^\prime \) which are full-weight at \( \text{f} \).
-overlapping 5-tuples. This implies that the same is true for \( R^\prime \). 
-Now, for any choice of \( \text{f} \), then \(b_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1] \)
-and \(r_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0] \) which are known to be in \( B^\prime \) and \( R^\prime \)
-respectively will 1 of the 5 full-weight words at \( f \). If we then restrict the coordinates
-at \( F \setminus \text{f} \) to be all zero, then these words vanish but the others must 
-remain. \( b_1  \) and \( r_1 \) can be the only words in \( B^\prime \) and \( R^\prime \) 
-with 5 or more nonzero coordinates in  \( F \). Hence \( B^\prime \) and \( R^\prime \)
-each contain \( 5 - 1 = 4 \) codewords having ones at \( \text{f} \) and zeros at \( F \setminus \text{f} \).
+%overlapping 5-tuples. This implies that the same is true for \( R^\prime \). 
+%Now, for any choice of \( \text{f} \), then \(b_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1] \)
+%and \(r_1 = [1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0] \) which are known to be in \( B^\prime \) and \( R^\prime \)
+%respectively will 1 of the 5 full-weight words at \( f \). If we then restrict the coordinates
+%at \( F \setminus \text{f} \) to be all zero, then these words vanish but the others must 
+%%remain. \( b_1  \) and \( r_1 \) can be the only words in \( B^\prime \) and \( R^\prime \) 
+%with 5 or more nonzero coordinates in  \( F \). Hence \( B^\prime \) and \( R^\prime \)
+%each contain \( 5 - 1 = 4 \) codewords having ones at \( \text{f} \) and zeros at \( F \setminus \text{f} \).
 \end{proof}
 
 \subsection*{Build a Sporadic Group in your Kaggle Notebook}
@@ -713,19 +713,41 @@ coordinates and \( C \) in one nonzero coordinate. What follows from this is a t
 guessing. I wanted to feel like I was building \( M_{24} \)
 from the ground up and these guesses felt a bit contrived. I decided to take their specific
 strategy of constraining \( F \) and isolating coordinates in \( C \) and
-run with it to create a python program that would find \( \chi \) for me. In particular I
+run with it by creating a python program that would find \( \chi \) for me. In particular I
 apply the same strategy to coordinates in \( D \) as well.
 The results of this program are given in the following Kaggle notebook.
-First I needed to write some classes to represent the structure of the Golay codes and 
-also the partitions \( F,C,D \). Then the algorithm proceeds by establishing a key value
+%First I needed to write some classes to represent the structure of the Golay codes and also the partitions \( F,C,D \). 
+Then the algorithm proceeds by establishing a key value
 map, "from\_to\_map", which associates coordinates in the domain of \( \chi \) with sets of 
 potential mappings in the codomain. We don't assume anything to begin with so we initilize the following. 
-Note that I'm using 0-indexing for this program.
+Note that I'm using 0-indexing where the \( i\text{th} \) index represents coordinate \( i + 1 \).
 \[
     \text{from\_to\_map} = \{ 0: \text{Infinite\_Set(), } 1: \text{Infinite\_Set(), } 2: \text{Infinite\_Set(), } ..., 23: \text{Infinite\_Set()} \}
 \] 
-
-
+Our goal is to reduce this map to a one to one correspondence. When we establish a new 
+constraint on the map, something like \( 0 \to 1 \text{ or } 0 \to 2\), we intersect
+\( \{1, 2\} \) with the current set of possible mappings for  \( 0 \). 
+We start by hard coding the assumptions thus far. All coordinates of \( F \) go to \( F \) 
+and \( 20 \to 16 \). Now we apply a generalization of the strategy presented in the paper.
+For all  \( \binom{7}{4} \) sets \( \text{f} \subset F \), \( \lvert \text{f} \rvert = 4 \), and for each
+partition  \( P \in \{C, D\} \) we filter \( B^\prime \) and  \( R^\prime \) for codewords with
+ones at coordinates \( \text{f} \), zeros at coordinates \( F \setminus \text{f} \), and with
+only one coordinate of  \( P \) nonzero. These filtered codeword sets of \( B^\prime \)
+and  \( R^\prime \), denoted \( B^* \) and  \( R^* \) respectively, must correspond under \( \chi \).
+In particular, the nonzero coordinates of each word \( b \in B^*  \) intersecting \( P \),
+denoted \( c_b^* \), must
+map to those of \( r \in R^* \), denoted \( c_r^* \). For each each index, \( i \), representing 
+the coordinates in \( c_b^* \), we update  
+\( \text{from\_to\_map}[i] = \text{from\_to\_map}[i] \cap c_r^* \). The result of this
+computation gives
+\begin{align*}
+    \text{from\_to\_map} = \{0&: \{0\}, 1: \{1\}, 2: \{2\}, 3: \{3\}, 4: \{4\}, 5: \{16, 19\}, 6: \{18, 11\}, 7: \{12, 21\}, 8: \{9, 23\},  \\
+                             9&: \{8, 5\}, 10: \{10, 7\}, 11: \{10, 7\}, 12: \{12, 21\}, 13: \{13, 6\}, 14: \{8, 5\}, 15: \{9, 23\}, 16: \{16, 19\}, \\
+                            17&: \{17\}, 18: \{13, 6\}, 19: \{22, 14\}, 20: \{20\}, 21: \{18, 11\}, 22: \{22, 14\}, 23: \{15\}\}
+\end{align*}
+For every coordinate in the domain, we've established either an exact mapping or a pair of
+coordinates in the codomain. Also, each pair in the codomain is mapped to by two coordinates
+in the domain. Collecting these domain pairs together yields the simpler representation
 
 %\item First item
 %\item Second item
