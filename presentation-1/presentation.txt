@@ -1,0 +1,55 @@
+integers mod n, matrices, real numbers, quaternions.. This is going to feel alot different. 
+
+
+Core Ideas
+
+- groups
+    - simple groups 
+    - finite groups
+        - finite simple groups 
+            - sporadic groups
+                - Mathieu groups
+                    - M24
+
+- error-correcting code
+    - linear code
+    - self-orthogonal code
+        - extended golay code 
+  ^
+  |
+  | -> equivalence map (equivalent codes), automorphism group |
+  |                                                           |
+  v                                                           |
+                                                              |
+- homomorphism                                                |
+    - isomorphism                                             |  
+    - endomorphism                                            | 
+        - automorphism                                        |
+                                                              | 
+                  ---------------------------------------------
+                  |
+                  |
+- 5-transitivity  <
+- steiner systems
+
+Chronological ordering of events
+(The narrative)
+How many have taken a course in Modern Algebra?
+lte half the class -> brief overview of the axioms 
+gt half the class  -> you guys know that a group is this thing.. identity, assoc .. etc
+closure property will be important
+if you have taken / recall that.. a normal group of a group G is a subgroup that divides the group G into left and right cosets which are equal 
+Z, 5Z, Z_5 - example (quick)
+We're going to try to understand a finite simple group discovered by _, it's denoted M24
+a set of |M24| permutations - subset of S24 and our goal is to find a simple and 'natural' representation 
+One way to do this is to find generator permutations. We want a minimal set of permutations which can be arbitrarily combined to generate all of M24
+so something like abc, where we evaluate right to left.
+To do this we really need the right perspective v
+
+** defnitely **
+
+Z5 is cyclic like a clock -> we could represent this as a pentagon
+Even more generally 
+
+**************
+Big Question - We know that Aut(G) =~ M24 by a theorem. 

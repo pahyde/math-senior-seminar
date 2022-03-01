@@ -7,12 +7,34 @@
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem{Hao:gidmaps:2014}
-\bibinfo{author}{Hao, Z.}, \bibinfo{author}{AghaKouchak, A.},
-  \bibinfo{author}{Nakhjiri, N.} \& \bibinfo{author}{Farahmand, A.}
-\newblock \bibinfo{title}{Global integrated drought monitoring and prediction
-  system ({GIDMaPS}) data sets}.
-\newblock \bibinfo{howpublished}{\emph{figshare}
-  \url{http://dx.doi.org/10.6084/m9.figshare.853801}} (\bibinfo{year}{2014}).
+\bibitem{physics}
+\bibinfo{author}{Boya, L.~J.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Introduction to sporadic groups}}.
+\newblock {\emph{\JournalTitle{SIGMA. Symmetry, Integrability and Geometry:
+  Methods and Applications}}} \textbf{\bibinfo{volume}{7}},
+  \bibinfo{pages}{009} (\bibinfo{year}{2011}).
+
+\bibitem{basics}
+\bibinfo{author}{Aschbacher, M.}
+\newblock \bibinfo{journal}{\bibinfo{title}{The status of the classification of
+  the finite simple groups}}.
+\newblock {\emph{\JournalTitle{Notices of the American Mathematical Society}}}
+  \textbf{\bibinfo{volume}{51}}, \bibinfo{pages}{736--740}
+  (\bibinfo{year}{2004}).
+
+\bibitem{sporadic}
+\bibinfo{author}{Becker, P.~E.}, \bibinfo{author}{Derka, M.},
+  \bibinfo{author}{Houghten, S.} \& \bibinfo{author}{Ulrich, J.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Build a sporadic group in your
+  basement}}.
+\newblock {\emph{\JournalTitle{The American Mathematical Monthly}}}
+  \textbf{\bibinfo{volume}{124}}, \bibinfo{pages}{291--305}
+  (\bibinfo{year}{2017}).
+
+\bibitem{aut}
+\bibinfo{author}{Brouwer, A.~E.}
+\newblock \bibinfo{title}{The witt designs, golay codes and mathieu groups.
+  notes}.
+\newblock \bibinfo{howpublished}{https://www.win.tue.nl/~aeb/2WF02/Witt.pdf}.
 
 \end{thebibliography}

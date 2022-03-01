@@ -1,0 +1,184 @@
+\documentclass{beamer}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {./images/}  }
+
+%Information to be included in the title page:
+\title{Review: Build a Sporadic Group in Your Basement}
+\author{Parker Hyde}
+\institute{Georgia State University}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{What is a Group?}
+    \begin{itemize}
+        \item<2-> \( (G, *) \)
+        \item<3->satisfying the properties:
+            \begin{enumerate}
+                \item closure \( a, b \in G \implies a * b \in G \)
+                \item associativity: \(  a * (b * c) = (a * b) * c \ \ \forall a,b,c \in G \) 
+                \item existence of identity: \( \exists e \in G \text{ s.t. } a*e = e*a = a \ \forall a \in G \) 
+                \item existence of inverses: \( \forall a \in G,  \exists a^{-1} \text { s.t. } a * a^{-1} = a^{-1} * a = e\) 
+            \end{enumerate}
+    \end{itemize}
+    \only<4->{
+        \bigbreak
+        Examples:
+        \( (\mathbb{Z}, +) \) \ 
+        %\only<5->{\( S_{n} = (\sigma_n, \circ)\)}
+        %\bigbreak
+        %\only<6->{ \( \begin{pmatrix}
+        %        1 & 2 & 3 & \cdots & n-1 & n \\
+        %        2 & 3 & 4 & \cdots &  n  & 1
+        %      \end{pmatrix} \in \sigma_n
+        %  \) }
+    }
+\end{frame}
+\newtheorem{exmp}{Example}
+
+\begin{frame}
+    \frametitle{What is the Sporadic group \( M_{24} \)?}
+    \begin{itemize}
+        \item<2-> \( M_{24} \le S_{24} = (\pi_{24}, \circ) \)
+            \only<3->{\( \ni \begin{pmatrix}
+                1 & 2 & 3 & \cdots & 23 & 24 \\
+                2 & 3 & 4 & \cdots & 24  & 1
+        \end{pmatrix} \)}
+    \item<4-> \( |M_{24}| = 2^{10} \cdot 3^3 \cdot 5 \cdot 7 \cdot 11 \cdot 23 = 244823040 \)
+        \bigbreak
+    \item<5-> A Sporadic Group is a \textit{special} of finite simple group.
+    \item<6-> A simple group is a group with no nontrivial normal groups.
+    \item<7-> 
+        \begin{example}
+        \end{example}
+        \( 5\mathbb{Z} = \{..., -10, -5, 0, 5, 10, ...\} \unlhd \mathbb{Z} \)
+    \item<8-> \( \implies \frac{\mathbb{Z}}{5\mathbb{Z}} 
+            = \mathbb{Z}_5
+            = \{ \overline{0}, \overline{1}, \overline{2}, \overline{3}, \overline{4} \}\)
+            \bigbreak
+        \item<9-> \( M_{24} \) is an unusual finite simple group.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Mathieu's Construction}
+    \begin{itemize}
+        \item<1->\( M_{24} \) was originally constructed by the following three arbitrary
+            permutations.
+            \footnotesize{
+            \begin{align*}
+                a &= (1,2,3,...,23) \\
+                b &= (3,17,10,7,9)(5,4,13,14,19)(11,12,23,8,18)(21,16,15,20,22) \\
+                c &= (1,24)(2,23)(3,12)(4,16)(5,18)...(9,21)(11,17)(13,22)(19,15)
+            \end{align*}
+        }%
+    \item<2-> link: http://www.netlify/app.sdfjewhwef.com
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Extended Golay Code}
+    \begin{itemize}
+        \item<2-> First, write down the numbers \(0, \ 1 , \ 2, \ ..., \ 2^{24} - 1\).
+        \item<3-> Consider their binary representation as \( 24 \)-bit words.
+        \item<4-> Add \( 0 \) to the list.
+        \item<5-> Add any number differing in at \( 8 \) bit positions from previously 
+            added words.
+        \item<6-> Which gives an extended Golay Code:
+        \item<4->
+            \begin{align*}
+                000000000000000000000000 \\
+                \only<5->{ 000000000000000011111111 \\}
+                \only<6->{  000000000000111100001111 \\
+                000000000011001100110011 \\
+                000000000101010101010101\\
+                ...........................................\\
+                ...........................................
+            }
+            \end{align*}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Two Extended Golay Code Models}
+    \begin{columns}
+        \column{0.5\textwidth}
+        Quadratic Residue (R)
+        \setcounter{MaxMatrixCols}{25}                                   
+        \setlength\arraycolsep{0.5pt}                                    
+        
+        \scriptsize{
+        \[                                                               
+            \begin{bmatrix}                                          
+                1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&0&0&0&0&0&1 \\    
+                0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&0&0&0&0&1 \\    
+                0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&0&0&0&1 \\    
+                0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&0&0&1 \\    
+                0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&0&1 \\    
+                0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1&1 \\    
+                1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&0&1 \\    
+                0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1&1 \\    
+                1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&0&1 \\    
+                0&1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&0&1 \\    
+                0&0&1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1&1 \\    
+                1&0&0&1&0&1&0&0&0&0&0&1&1&1&1&0&1&0&1&1&0&0&1&1\\     
+                    \end{bmatrix}                                                
+        \]
+        }
+        \column{0.5\textwidth}
+        Block-Substitution (B)
+        \bigbreak 
+        \setcounter{MaxMatrixCols}{25}                                   
+        \setlength\arraycolsep{2pt}                                    
+        \scriptsize{
+            \[
+                I = \begin{bmatrix}
+                        1 & 0 & 0 \\
+                        0 & 1 & 0 \\
+                        0 & 0 & 1 
+                    \end{bmatrix}
+                    \mkern9mu
+                \overline{I} = \begin{bmatrix}
+                        0 & 1 & 1 \\
+                        1 & 0 & 1 \\
+                        1 & 1 & 0 
+                    \end{bmatrix}
+                    \mkern9mu
+                J = \begin{bmatrix}
+                        0 & 1 & 1 \\
+                        1 & 0 & 1 \\
+                        1 & 1 & 0 
+                    \end{bmatrix}
+            \] 
+             \setlength\arraycolsep{5pt}                                    
+            \[
+               B = \begin{bmatrix}                             
+                    I & 0 & 0 & 0 & \overline{I} & I & I & J\\  
+                    0 & I & 0 & 0 & J & \overline{I} & I & I\\  
+                    0 & 0 & I & 0 & I & J & \overline{I} & I\\  
+                    0 & 0 & 0 & I & I & I & J & \overline{I}    
+                \end{bmatrix}                                   
+            \] 
+           \bigbreak 
+           \bigbreak 
+           \bigbreak 
+        }
+    \end{columns}
+    \only<2->{
+    \[
+        \sigma = (1,2,3,4,5,6,7,8,9,10,11,12,13,14 ..., 22, 23)(24) 
+    \]
+}
+    \only<3-> {
+    \[
+        \rho = (1,2,3)(4,5,6)(7,8,9)(10,11,12)...(22,23,24) 
+    \]
+}
+\end{frame}
+
+\end{document}
